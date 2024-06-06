@@ -1,0 +1,13 @@
+.back{
+    font-family: "Quicksand", sans-serif;
+}
+/* FadeOutSection.css */
+.fade-out {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  .fade-out.scrolled {
+    opacity: 0;
+  }
+  
