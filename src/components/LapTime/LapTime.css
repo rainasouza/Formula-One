@@ -1,0 +1,44 @@
+.lap-time-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lap-time-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.lap-time-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lap-time-loading,
+.lap-time-error {
+    text-align: center;
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+.lap-time-race-info {
+    margin-top: 20px;
+}
+
+.lap-time-table {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .lap-time-form .mb-3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

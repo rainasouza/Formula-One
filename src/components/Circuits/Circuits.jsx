@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styles from './Circuits.module.css';
+import './Circuits.css'
 import { Pagination, Table, Form, Button } from 'react-bootstrap';
 
 const Circuits = () => {
@@ -49,14 +49,14 @@ const Circuits = () => {
   const currentItems = filteredCircuits.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <div className={styles.body}>
-      <h1>All the 77 circuits and information about them</h1>
+    <div className="body">
+      <h1>All the 77 circuits </h1>
 
-      <Form className="d-flex mb-3" onSubmit={handleSearchSubmit}>
+      <Form className="form-container" onSubmit={handleSearchSubmit}>
         <Form.Control
           type="search"
           placeholder="Search"
-          className="me-2"
+          className="form-control"
           aria-label="Search"
           value={query}
           onChange={handleSearchChange}
@@ -64,7 +64,7 @@ const Circuits = () => {
         <Button variant="outline-success" type="submit">Search</Button>
       </Form>
 
-      <Table striped bordered hover responsive>
+      <Table striped bordered hover responsive className="table">
         <thead>
           <tr>
             <th>Circuit</th>
@@ -85,7 +85,7 @@ const Circuits = () => {
         </tbody>
       </Table>
 
-      <Pagination>
+      <Pagination size='sm' className="pagination">
         {[...Array(Math.ceil(filteredCircuits.length / itemsPerPage)).keys()].map(pageNumber => (
           <Pagination.Item
             key={pageNumber + 1}
@@ -96,7 +96,9 @@ const Circuits = () => {
           </Pagination.Item>
         ))}
       </Pagination>
-    </div>
+      </div>
+
+
   );
 }
 

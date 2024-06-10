@@ -93,8 +93,8 @@ const Constructor = () => {
         </Table>
       </div>
 
-      <Pagination>
-        {[...Array(Math.ceil(filteredConstructors.length / itemsPerPage)).keys()].map(pageNumber => (
+      <Pagination size='sm'>
+      {[...Array(Math.ceil(filteredConstructors.length / itemsPerPage)).keys()].map(pageNumber => (
           <Pagination.Item
             key={pageNumber + 1}
             active={pageNumber + 1 === currentPage}

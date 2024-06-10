@@ -9,7 +9,9 @@ import Circuits from './components/Circuits/Circuits';
 import Schedule from './components/Schedule/Schedule';
 import Constructor from './components/Constructors/Constructor';
 import NavBar from './components/NavBar/NavBar';
-
+import Drivers from './components/Drivers/Drivers';
+import LapTime from './components/LapTime/LapTime';
+import Winners from './components/Winners/Winners';
 function App() {
   return (
     <div className="App">
@@ -21,13 +23,9 @@ function App() {
             <Route path="circuits" element={<Circuits/>} />
             <Route path="schedule" element={<Schedule/>} />
             <Route path="constructors" element={<Constructor/>} />
-
-
-
-
-
-
-
+            <Route path="drivers" element={<Drivers/>} />
+            <Route path="winners" element={<Winners/>} />
+            <Route path="laps" element={<LapTime/>} />
 
           </Route>
         </Routes>
