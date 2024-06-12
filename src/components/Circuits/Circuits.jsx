@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Circuits.css'
 import { Pagination, Table, Form, Button } from 'react-bootstrap';
 
 const Circuits = () => {
@@ -28,8 +27,8 @@ const Circuits = () => {
     setCurrentPage(pageNumber);
   };
 
-  const handleSearchChange = (event) => {
-    setQuery(event.target.value);
+  const handleSearchChange = (e) => {
+    setQuery(e.target.value);
   };
 
   const handleSearchSubmit = (event) => {
@@ -50,7 +49,6 @@ const Circuits = () => {
 
   return (
     <div className="body">
-      <h1>All the 77 circuits </h1>
 
       <Form className="form-container" onSubmit={handleSearchSubmit}>
         <Form.Control

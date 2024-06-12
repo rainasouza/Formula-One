@@ -57,7 +57,7 @@ const Constructor = () => {
       <Form className="d-flex mb-3" onSubmit={handleSearchSubmit}>
         <Form.Control
           type="search"
-          placeholder="Search"
+          placeholder="Search by name or nacionality!"
           className="me-2"
           aria-label="Search"
           value={searchQuery}
@@ -66,7 +66,6 @@ const Constructor = () => {
         <Button variant="outline-success" type="submit">Search</Button>
       </Form>
 
-      <h1>Constructors</h1>
       <div className="table-responsive">
         <Table striped bordered hover responsive>
           <thead>

@@ -60,57 +60,58 @@ const LapTime = () => {
     return (
         <div className="lap-time-container">
             <h2 className="lap-time-title">LapTime</h2>
-            <Form onSubmit={handleSubmit} className="lap-time-form">
-                <Form.Group className="mb-3">
-                    <Form.Label>Year</Form.Label>
+                <Form onSubmit={handleSubmit} className="lap-time-form">
+                    <Form.Group className="mb-3">
+                    <Form.Label>Season of</Form.Label>
                     <Form.Control type="number" value={season} onChange={handleChangeSeason} required />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Round</Form.Label>
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                    <Form.Label>Race Number</Form.Label>
                     <Form.Control type="number" value={round} onChange={handleChangeRound} required />
-                </Form.Group>
-                <Form.Group className="mb-3">
+                    </Form.Group>
+                    <Form.Group className="mb-3">
                     <Form.Label>Lap Number</Form.Label>
                     <Form.Control type="number" value={lap} onChange={handleChangeLap} required />
-                </Form.Group>
-                <Button variant="primary" type="submit" disabled={loading}>
+                    </Form.Group>
+                    <Button  type="submit" disabled={loading}>
                     {loading ? 'Loading...' : 'Fetch Data'}
-                </Button>
-            </Form>
+                    </Button>
+                </Form>
 
             {loading && <p>Carregando...</p>}
 
             {race && (
-                <div>
-                    <h3>Race Information</h3>
-                    <p><strong>Race Name:</strong> {race.raceName}</p>
-                    <p><strong>Circuit Name:</strong> {race.Circuit.circuitName}</p>
-                    <p><strong>Location:</strong> {race.Circuit.Location.locality}, {race.Circuit.Location.country}</p>
-                    <p><strong>Date: </strong>{format(parseISO(race.date), 'MMMM do, yyyy') }</p>
+                <div className="race-info">
+                <h3>Race Information</h3>
+                <p><strong>Race Name:</strong> {race.raceName}</p>
+                <p><strong>Circuit Name:</strong> {race.Circuit.circuitName}</p>
+                <p><strong>Location:</strong> {race.Circuit.Location.locality}, {race.Circuit.Location.country}</p>
+                <p><strong>Date:</strong> {format(parseISO(race.date), 'MMMM do, yyyy')}</p>
                 </div>
             )}
 
-            {lapsData.length > 0 && (
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Position</th>
-                            <th>Driver ID</th>
-                            <th>Time</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {lapsData.map((lap, position) => (
-                            <tr key={position}>
-                                <td>{lap.position}</td>
-                                <td>{lap.driverId}</td>
-                                <td>{lap.time}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </Table>
-            )}
+        {lapsData.length > 0 && (
+            <Table striped bordered hover className="laps-table">
+            <thead>
+                <tr>
+                <th>Position</th>
+                <th>Driver ID</th>
+                <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {lapsData.map((lap, position) => (
+                <tr key={position}>
+                    <td>{lap.position}</td>
+                    <td>{lap.driverId}</td>
+                    <td>{lap.time}</td>
+                </tr>
+                ))}
+            </tbody>
+            </Table>
+        )}
         </div>
+
     );
 };
 

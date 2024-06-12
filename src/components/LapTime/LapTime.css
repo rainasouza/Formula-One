@@ -1,44 +1,68 @@
 .lap-time-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    background-color: #f8f9fa;
     border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.lap-time-title {
-    font-size: 2em;
+    margin-top: 25px;
+  }
+  
+  .lap-time-title {
+    text-align: center;
     margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
+    font-size: 2rem;
+    color: #343a40;
+  }
+  
+  .lap-time-form {
+    margin-bottom: 20px;
+  }
 
-.lap-time-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.lap-time-loading,
-.lap-time-error {
-    text-align: center;
-    color: #dc3545;
-    margin-top: 10px;
-}
-
-.lap-time-race-info {
+  
+  .lap-time-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .lap-time-form .form-label {
+    color: #495057;
+  }
+  
+  .lap-time-form .form-control {
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .lap-time-form .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    transition:  0.3s ease;
+  }
+  .lap-time-form .btn-primary {
+    background-color: #b41200;
+    border-color: #300c0c;
+  }
+  .lap-time-form .btn-primary:hover {
+    background-color: #851b0190;
+  }
+  
+  .race-info {
     margin-top: 20px;
-}
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+  }
+  
+  .race-info h3 {
+    margin-bottom: 15px;
+    color: #343a40;
+  }
+  
+  .race-info p {
+    margin-bottom: 8px;
+    color: #495057;
+  }
+  
 
-.lap-time-table {
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .lap-time-form .mb-3 {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
+  

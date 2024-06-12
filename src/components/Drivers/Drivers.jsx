@@ -25,7 +25,7 @@ const Drivers = () => {
 
     },[])
     if(loading) {
-        <p>carregando...</p>
+        <p>cCarregando...</p>
     }
 
     const handlePageChange = (pageNumber) => {
@@ -57,7 +57,7 @@ const currentDrivers= filteredDrivers.slice(indexOfFirstItem, indexOfLastItem)
         <Form className="d-flex mb-3" onSubmit={handleSearchSubmit}>
             <Form.Control
                       type="search"
-                      placeholder="Search"
+                      placeholder="Search by first or last name!"
                       className="me-2"
                       aria-label="Search"
                       value={query}
@@ -88,8 +88,6 @@ const currentDrivers= filteredDrivers.slice(indexOfFirstItem, indexOfLastItem)
                 ))}
             </tbody>
         </Table>
-
-
 
         <Pagination size='sm'>
             {[...Array(Math.ceil(filteredDrivers.length / itemsPerPage)).keys()].map(pageNumber => (

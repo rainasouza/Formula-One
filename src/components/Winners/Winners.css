@@ -1,0 +1,58 @@
+.winners-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+  }
+  
+  .winners-title {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  
+  .winners-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .winners-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .winners-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .winners-form button:hover {
+    background-color: #218838;
+  }
+  
+
+  .winners-error {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .winners-loading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

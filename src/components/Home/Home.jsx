@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import styles from './Home.module.css';
+import React, { useState, useEffect } from 'react';
+import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import { Card, Button, Modal, Container, Row, Col } from 'react-bootstrap';
+import {  Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
+
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -14,6 +15,25 @@ const Home = () => {
   };
 
   const handleCloseModal = () => setShowModal(false);
+
+ 
+
+  const facts = [
+    "The longest circuit on the current Formula 1 calendar is the Circuit de Spa-Francorchamps in Belgium, at 7.004 km (4.352 miles) long.",
+    "Ferrari holds the record for the most Constructors' Championships, having won it 16 times.",
+    "The 1 in Formula 1 denotes the highest level of international single-seater auto racing, indicating that it is the pinnacle of motorsport",
+    "The quickest refueling pit stop ever recorded was performed by the Red Bull Racing team in 2019, with a time of just 1.91 seconds."
+  ];
+
+  const [currentFactIndex, setCurrentFactIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFactIndex((prevIndex) => (prevIndex + 1) % facts.length);
+    }, 2000); 
+  
+    return () => clearInterval(interval);
+  }, [facts.length]);
+  
 
   const cards = [
     {
@@ -170,29 +190,34 @@ const Home = () => {
   ];
 
   return (
-    <div className={styles.back}>
+    <div >
       <main>
-        <section className="py-5 text-center container">
-          <div className="row py-lg-5">
-            <div className="col-lg-6 col-md-8 mx-auto">
-              <h1 className="fw-light">Did you know?</h1>
-              <br />
-              <p className="lead text-body-secondary">
-                that a Formula One car can go from 0 to 100 mph (0 to 160 km/h) and back to 0 in just about 5 seconds? This incredible acceleration is a testament to the power and engineering of these racing machines. Formula One cars are designed to reach extremely high speeds and handle intense forces, making them some of the fastest accelerating vehicles in the world.
-              </p>
-            </div>
-          </div>
-        </section>
+      <section className="text-center container fact-cards">
+      <div className="py-lg-5">
+        <div className="col-lg-8 col-md-10 mx-auto">
+          <h1 className="fw-light">Did you know?</h1>
+          <Row className="justify-content-center">
+            <Col md={6} lg={4} className="mb-4">
+              <Card className="fact-card">
+                <Card.Body>
+                  <Card.Text>{facts[currentFactIndex]}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </div>
+    </section>
 
         <div className="album py-5 bg-body-tertiary">
           <Container>
             <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {cards.map((card, index) => (
                 <Col key={index}>
-                  <Card className={`${styles.card} text-white bg-dark mb-3`} onClick={() => handleShowModal(card.modalData)}>
-                    <Card.Img variant="top" src={card.img} alt={`Image of ${card.title}`} />
-                    <Card.Body>
-                      <Card.Text>{card.text}</Card.Text>
+                  <Card className="card" >
+                    <Card.Img variant="top" src={card.img} alt={`Image of ${card.title}`} className="cardImgTop" />
+                    <Card.Body className="cardBody">
+                      <Card.Text className="cardText">{card.text}</Card.Text>
                       <div className="d-flex justify-content-between align-items-center">
                         <Button variant="outline-secondary" size="sm" onClick={() => handleShowModal(card.modalData)}>
                           About
@@ -208,10 +233,10 @@ const Home = () => {
         </div>
 
         <Modal show={showModal} onHide={handleCloseModal} centered>
-          <Modal.Header closeButton>
-            <Modal.Title>{modalData.name}</Modal.Title>
+          <Modal.Header  closeButton className="modalHeader">
+            <Modal.Title className="modalTitle">{modalData.name}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="modalBody">
             <p><b>Base:</b> {modalData.base}</p>
             <p><b>Team Chief:</b> {modalData.chief}</p>
             <p><b>First Team Entry:</b> {modalData.entry}</p>
@@ -219,7 +244,6 @@ const Home = () => {
             <p><b>Pole Positions:</b> {modalData.poles}</p>
             <p>Know more about it <a href={modalData.url} target="_blank" rel="noopener noreferrer">here</a>.</p>
           </Modal.Body>
-
         </Modal>
       </main>
     </div>

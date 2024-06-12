@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { format, parseISO } from 'date-fns';
 import { Table, Button, Modal, Pagination } from 'react-bootstrap';
+import './Schedule.css'
 
 const Schedule = () => {
   const [schedules, setSchedules] = useState([]);
@@ -44,13 +45,12 @@ const Schedule = () => {
 
   return (
     <div>
-      <h1>Schedule</h1>
       <div className="table-responsive">
         <Table striped bordered hover responsive>
           <thead>
             <tr>
-              <th>Circuit Name</th>
-              <th>Details</th>
+              <th>Grand Prix</th>
+              <th>Information</th>
             </tr>
           </thead>
           <tbody>
@@ -105,7 +105,7 @@ const Schedule = () => {
 
               {selectedRace.Sprint && (
                 <div>
-                  <h5>Sprint Practice</h5>
+                  <h5>Sprint</h5>
                   <p>Date: {format(parseISO(selectedRace.Sprint.date), 'MMMM do, yyyy')}</p>
                   <p>Time: {format(parseISO(`${selectedRace.Sprint.date}T${selectedRace.Sprint.time}`), 'hh:mm a')}</p>
                 </div>
