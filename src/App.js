@@ -12,6 +12,7 @@ import NavBar from './components/NavBar/NavBar';
 import Drivers from './components/Drivers/Drivers';
 import LapTime from './components/LapTime/LapTime';
 import Winners from './components/Winners/Winners';
+import About from './components/About/About';
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,8 @@ function App() {
             <Route path="drivers" element={<Drivers/>} />
             <Route path="winners" element={<Winners/>} />
             <Route path="laps" element={<LapTime/>} />
+            <Route path="about" element={<About/>} />
+
 
           </Route>
         </Routes>

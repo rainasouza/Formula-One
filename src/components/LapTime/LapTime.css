@@ -2,10 +2,11 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color:  #b9776b67; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 25px;
+    font-family:Geneva, sans-serif;
   }
   
   .lap-time-title {
@@ -40,8 +41,10 @@
     transition:  0.3s ease;
   }
   .lap-time-form .btn-primary {
-    background-color: #b41200;
-    border-color: #300c0c;
+    background-color: #9e2914c6;
+    border:none;
+    color: rgb(225, 190, 175);
+
   }
   .lap-time-form .btn-primary:hover {
     background-color: #851b0190;
@@ -50,19 +53,24 @@
   .race-info {
     margin-top: 20px;
     padding: 15px;
-    background-color: #e9ecef;
+    background-color: #b96e6963;
     border-radius: 8px;
   }
   
   .race-info h3 {
     margin-bottom: 15px;
-    color: #343a40;
+    color: #222528;
   }
   
   .race-info p {
     margin-bottom: 8px;
-    color: #495057;
+    color: #551b0d;
   }
   
+  .laps-error {
+    color: #ff0c25;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   

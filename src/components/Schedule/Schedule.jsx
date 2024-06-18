@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { format, parseISO } from 'date-fns';
-import { Table, Button, Modal, Pagination } from 'react-bootstrap';
+import { Table, Button, Modal, Pagination, Container} from 'react-bootstrap';
 import './Schedule.css'
 
 const Schedule = () => {
@@ -40,11 +40,13 @@ const Schedule = () => {
   const currentItems = schedules.slice(indexOfFirstItem, indexOfLastItem);
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return <p>Loading...</p>;
   }
 
   return (
     <div>
+      <Container className="py-4">
+
       <div className="table-responsive">
         <Table striped bordered hover responsive>
           <thead>
@@ -119,6 +121,7 @@ const Schedule = () => {
         </Modal.Body>
 
       </Modal>
+      </Container>
     </div>
   );
 }

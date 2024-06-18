@@ -30,8 +30,7 @@ const Winners = () => {
                     const data = response.data.MRData.RaceTable.Races || [];
                     setWinners(data);
                 } catch (err) {
-                    console.error('Error fetching data:', err);
-                    setError('Error fetching data. Please try again later.');
+                    setError('Error fetching data. Please verify if the season is correct.');
                 } finally {
                     setWaiting(false);
                 }   
@@ -41,7 +40,9 @@ const Winners = () => {
         if (waiting) {
             fetchWinners();
         }
+
     }, [season, waiting]);
+        
 
     return (
         <div className="winners-container">
@@ -56,8 +57,8 @@ const Winners = () => {
                 <Button variant="outline-success" type="submit">Search</Button>        
             </Form>
 
-            {error && <p className="winners-error"></p>}
-            {waiting && <p className="winners-loading">Waiting..</p>}
+            {error && <p className="winners-error">{error}</p>}
+            {waiting && <p className="winners-loading"></p>}
 
             {Array.isArray(winners) && winners.length > 0 && (
                 <Table className="winners-table" striped bordered hover>

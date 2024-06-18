@@ -38,8 +38,8 @@ const Home = () => {
   const cards = [
     {
       title: 'Alpine',
-      text: 'Alpine may be a relatively new name to Formula 1, but Renault’s famous sportscar arm has plenty of motorsport heritage.',
-      img: 'https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/content/dam/fom-website/manual/DriverAndTeamImages/2024/2065862959_16by9Centre',
+      text: "Alpine, rebranded from Renault F1 in 2021, competes in Formula 1 with a focus on performance and innovation, featuring a distinctive blue livery.",
+      img: 'https://cdn.group.renault.com/alp/master/formula-1/alpine-F1-A523-04.jpg.ximg.medium.webp/733012cd90.webp',
       team: 'Renault',
       modalData: {
         name: 'BWT Alpine F1 Team',
@@ -48,13 +48,13 @@ const Home = () => {
         entry: '1986',
         championships: 2,
         poles: 20,
-        url: 'https://www.formula1.com/en/teams/Alpine/Year%5Fby%5FYear.html',
+        url: 'https://www.alpine-cars.co.uk/formula-1/a523.html',
       },
     },
     {
       title: 'Aston Martin',
-      text: 'With a two-time champion leading their driver line-up, Aston Martin are very much a team to watch…',
-      img: 'https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/content/dam/fom-website/manual/DriverAndTeamImages/2024/2053204844_16by9Centre',
+      text: "Aston Martin returned to Formula 1 in 2021, known for its iconic green livery and ambitious goals, blending rich motorsport heritage with modern engineering excellence.",
+      img: 'https://assets.astonmartinf1.com/public/cms/1vWYcxAuJkweP1Pb6DRM4e/fccb76b4831f0949ddbaadb2acbbeedc/Shot_2_copy.jpg?&h=540&w=640&fit=thumb',
       team: 'Mercedes',
       modalData: {
         name: 'Aston Martin Aramco F1 Team',
@@ -63,13 +63,13 @@ const Home = () => {
         entry: '2018',
         championships: 0,
         poles: 1,
-        url: 'https://www.formula1.com/en/teams/aston-martin',
+        url: 'https://www.astonmartinf1.com/en-GB/',
       },
     },
     {
       title: 'Ferrari',
-      text: 'The only team to have competed in every season since the world championship began.',
-      img: 'https://storage.googleapis.com/static.elsoldemexico.com.mx/elesto/2024/05/Ferrari-tendra-decoracion-especial-para-el-GP-de-Miami.png',
+      text: 'Ferrari, the most storied team in Formula 1. Known for its iconic red cars, Ferrari boasts a legacy of innovation, passion, and numerous championships.',
+      img: 'https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/0x0/4e3063dc-7800-4dd3-b761-e450b58da479.jpg?v=148',
       team: 'Scuderia Ferrari',
       modalData: {
         name: 'Scuderia Ferrari',
@@ -78,13 +78,13 @@ const Home = () => {
         entry: '1950',
         championships: 16,
         poles: 250,
-        url: 'https://www.formula1.com/en/teams/Ferrari/Year%5Fby%5FYear.html',
+        url: 'https://www.ferrari.com/en-EN/formula1',
       },
     },
     {
       title: 'Haas',
-      text: 'The youngest team on the grid, Haas made their debut in 2016. Also became the first all-American-led F1 squad in 3 decades.',
-      img: 'https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/content/dam/fom-website/manual/DriverAndTeamImages/2024/2068767588_16by9North',
+      text: "Haas, the American Formula 1 team, joined the grid in 2016,  and aims to be a competitive midfield contender while representing the United States on the global racing stage.",
+      img: 'https://fluidideas.s3.eu-west-1.amazonaws.com/haas/s3fs-public/styles/landscape_small_desktop_1x/public/2024-02/vf24-2.jpg?VersionId=4iaECK1e.Fg4ZByxB2RjOT0j5oxmrO_u',
       team: 'Ferrari',
       modalData: {
         name: 'MoneyGram Haas F1 Team',
@@ -93,13 +93,13 @@ const Home = () => {
         entry: 2016,
         championships: 0,
         poles: 1,
-        url: 'https://www.formula1.com/en/teams/haas',
+        url: 'https://www.haasf1team.com/',
       },
     },
     {
       title: 'Kick Sauber',
-      text: 'Known for their competitive spirit, Kick Sauber is consistently working towards improving their standing in Formula One.',
-      img: 'https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/content/dam/fom-website/manual/DriverAndTeamImages/2024/2047992871_16by9North',
+      text: ' Renowned for nurturing young talent, Sauber has a history of resilience and adaptability, consistently competing as an independent team in the fiercely competitive world of F1.',
+      img: 'https://admin.sauber-motorsports.nobound.com/fileadmin/_processed_/a/0/csm_C44_03_92d9cd27d9.webp',
       team: 'Ferrari',
       modalData: {
         name: 'Stake F1 Team Kick Sauber',
@@ -108,13 +108,13 @@ const Home = () => {
         entry: 1993,
         championships: 0,
         poles: 1,
-        url: 'https://www.formula1.com/en/teams/kick-sauber',
+        url: 'https://www.sauber-group.com/feed?section=2024-spanish-grand-prix-preview&d=Racing',
       },
     },
     {
       title: 'McLaren',
-      text: 'Since entering the sport in 1966 under the guidance of founder Bruce, McLaren\'s success has been nothing short of breathtaking.',
-      img: 'https://pubimg.band.uol.com.br/files/9766cf5beccf814e7e02.jpeg',
+      text: "McLaren boasts a rich history since its founding in the 60s by Bruce McLaren. The team's distinctive papaya orange livery has been a hallmark on the grid.",
+      img: 'https://mclaren.bloomreach.io/cdn-cgi/image/width=1024,quality=80,format=webp/delivery/resources/content/gallery/mclaren-racing/formula-1/2024/whatever-it-takes/web/2024-f1-livery-launch-web-hero-mobile.jpg',
       team: 'Mercedes',
       modalData: {
         name: 'McLaren Formula 1 Team',
@@ -123,13 +123,13 @@ const Home = () => {
         entry: 1966,
         championships: 8,
         poles: 157,
-        url: 'https://www.formula1.com/en/teams/McLaren/Year%5Fby%5FYear.html',
+        url: 'https://www.mclaren.com/racing/',
       },
     },
     {
       title: 'Mercedes',
-      text: 'Mercedes\' modern F1 revival started a works squad for 2010 - the platform for a meteoric rise up the Grand Prix order.',
-      img: 'https://www.the-race.com/content/images/2024/02/M410697.jpg',
+      text: "Mercedes-AMG Petronas Formula One Team, commonly known as Mercedes, renowned for their technical prowess and consistent success in recent years.",
+      img: 'https://images.ctfassets.net/1fvlg6xqnm65/4gb5nvMiyKYztYgaibjo5t/84ed556e6fa4b17c8c48fcf0193572d8/2_FrontQTR_LH.jpg?w=640&q=75&fm=webp',
       team: 'Mercedes',
       modalData: {
         name: 'Mercedes-AMG PETRONAS F1 Team',
@@ -138,12 +138,12 @@ const Home = () => {
         entry: 1970,
         championships: 8,
         poles: 130,
-        url: 'https://www.formula1.com/en/teams/Mercedes/Year%5Fby%5FYear.html',
+        url: 'https://www.mercedesamgf1.com/',
       },
     },
     {
       title: 'Visa Cash App RB',
-      text: 'Originally named Toro Rosso and then AlphaTauri, Visa Cash App RB were formed from the ashes of the plucky Minardi team.',
+      text: "Scuderia AlphaTauri, also known as Scuderia Toro Rosso, is an Italian F1 racing team that serves as a junior team to Red Bull Racing. ",
       img: 'https://cdn-1.motorsport.com/images/amp/6l9XlLx0/s1000/daniel-ricciardo-vcarb-01.jpg',
       team: 'Honda RBPT',      
       modalData: {
@@ -153,14 +153,14 @@ const Home = () => {
         entry: 1985,
         championships: 0,
         poles: 1,
-        url: 'https://www.formula1.com/en/teams/RB/Year%5Fby%5FYear.html',
+        url: 'https://www.visacashapprb.com/en/',
       },
     },
     
     {
       title: 'RedBull',
-      text: 'RedBull were no strangers to F1 - as sponsors - prior to formally entering as a works team in 2004.',
-      img: 'https://s2-autoesporte.glbimg.com/_EVRiUWyrGWmbXXjIIJoSx9eGSg=/0x0:1200x715/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2023/w/H/NdD2S6S9mSWxXA4RofMg/red-bull-f1-rb.jpg',
+      text: "Red Bull Racing, owned by company Red Bull, have been highly competitive in F1, winning championships with drivers like Sebastian Vettel and Max Verstappen.",
+      img: 'https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2023/Red%20Bull/RB20%20launch/SI202402140542_hires_jpeg_24bit_rgb',
       team: 'Honda RBPT',
       modalData: {
         name: 'Oracle Red Bull Racing',
@@ -174,8 +174,8 @@ const Home = () => {
     },
     {
       title: 'Williams',
-      text: 'Driven on by the brilliance and passion of the late Sir Frank Williams, Williams grew from humble beginnings to become a Formula 1 behemoth.',
-      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTdKPRafkSWED0PhtURAsdCGebs4lTiV3xSQ&s',
+      text: "Williams Racing has a rich history in motorsport, renowned for its engineering prowess and past successes. Founded by Sir Frank Williams and Sir Patrick Head in 1977, the team has won multiple championships.",
+      img: 'https://cdn.williamsf1.tech/images/fnx611yr/production/0e9b5bcba0a3fc8fa194c73be7b5c04747e9a60d-8337x5558.jpg?h=960&auto=format',
       team: 'Mercedes',
       modalData: {
         name: 'Oracle Red Bull Racing',
@@ -184,14 +184,15 @@ const Home = () => {
         entry: 1978,
         championships: 9,
         poles: 128,
-        url: 'https://www.formula1.com/en/teams/Williams/Year%5Fby%5FYear.html',
+        url: 'https://www.williamsf1.com/',
       },
     },
   ];
 
   return (
-    <div >
-      <main>
+    <div className='body'>
+      <br></br><br></br>
+      <main >
       <section className="text-center container fact-cards">
       <div className="py-lg-5">
         <div className="col-lg-8 col-md-10 mx-auto">
@@ -208,29 +209,31 @@ const Home = () => {
         </div>
       </div>
     </section>
-
-        <div className="album py-5 bg-body-tertiary">
-          <Container>
+<br></br>
+        <div >
+          <Container >
             <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {cards.map((card, index) => (
                 <Col key={index}>
                   <Card className="card" >
                     <Card.Img variant="top" src={card.img} alt={`Image of ${card.title}`} className="cardImgTop" />
-                    <Card.Body className="cardBody">
-                      <Card.Text className="cardText">{card.text}</Card.Text>
+                    <Card.Body className="card-body">
+                      <Card.Text className="card-text">{card.text}</Card.Text>
                       <div className="d-flex justify-content-between align-items-center">
-                        <Button variant="outline-secondary" size="sm" onClick={() => handleShowModal(card.modalData)}>
+                        <Button className='button-a' size="sm" onClick={() => handleShowModal(card.modalData)}>
                           About
                         </Button>
-                        <small className="text-white">{card.team}</small>
+                        <small className="little-text">{card.team}</small>
                       </div>
                     </Card.Body>
                   </Card>
+                  <br></br>
                 </Col>
               ))}
             </Row>
           </Container>
         </div>
+        <br></br>
 
         <Modal show={showModal} onHide={handleCloseModal} centered>
           <Modal.Header  closeButton className="modalHeader">
@@ -242,10 +245,33 @@ const Home = () => {
             <p><b>First Team Entry:</b> {modalData.entry}</p>
             <p><b>World Championships:</b> {modalData.championships}</p>
             <p><b>Pole Positions:</b> {modalData.poles}</p>
-            <p>Know more about it <a href={modalData.url} target="_blank" rel="noopener noreferrer">here</a>.</p>
+            <p>Know more about it <a href={modalData.url} >here</a>.</p>
           </Modal.Body>
         </Modal>
       </main>
+      <br></br>
+
+      <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <p className="text-center text-muted mb-0 py-3">
+               {new Date().getFullYear()} I Cavallini by Raína Araújo. 
+            </p>
+            <p className="text-center text-muted mb-0 py-3">
+              I have it, I have it printed out!
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
     </div>
   );
 };

@@ -1,0 +1,18 @@
+.about-container {
+    padding: 20px;
+    background-color: #fef8e6; 
+    border: none;
+    margin-top: 20px;
+    line-height: 1.6;
+    align-items: center;
+  }
+  
+  .about-container a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  .about-container a:hover {
+    text-decoration: underline;
+  }
+  

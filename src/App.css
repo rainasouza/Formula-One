@@ -1,67 +1,8 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 20px;
+  font-family:Geneva, sans-serif ;
+  background-color: #fef8e6 !important;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-  font-size: 2.5em;
-}
-
-.navbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  color: #343a40;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-color: #343a40;
-}
-
-.navbar-nav .nav-link {
-  color: #343a40;
-  font-weight: 3000;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #bb0c0c;
-}
-
-.navbar-nav .dropdown-menu {
-  background-color: #f8f9fa;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.navbar-nav .dropdown-item {
-  color: #343a40;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar-nav .dropdown-item:hover {
-  background-color: #9a2a2aaa;
-  color: #fff;
-}
-
-.dropdown-divider {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-  
   .form-container {
     display: flex;
     justify-content: center;
@@ -72,7 +13,7 @@ h1 {
   .form-control {
     width: 300px;
     padding: 10px;
-    border: 2px solid #6c0c0c;
+    border: 2px solid #bc5148; ;
     border-radius: 5px;
     font-size: 1em;
   }
@@ -99,10 +40,11 @@ h1 {
   }
   
   .table thead th {
-    background-color: #b41200;
-    color: #fff;
+    background-color: #bc5248bf;
+    color: #fee4e4;
     text-align: left;
-    padding: 10px;
+    font-weight: 500;
+    font-size: medium;
   }
   
   .table tbody td {
@@ -111,18 +53,19 @@ h1 {
   }
   
   .table tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e2a686;
     cursor: pointer;
   }
   
   .table a {
-    color: #a20000;
+    color: #cc6f61fb;
     text-decoration: none;
     transition: color 0.3s;
+    text-decoration: underline;
   }
   
   .table a:hover {
-    color: #ff7d7d;
+    color: #f70505;
   }
   
   .pagination {
@@ -140,18 +83,18 @@ h1 {
   
   .pagination .page-item .page-link {
     color: #3e060c;
-    border: 1px solid #dc3545;
+    border: 1px ;
     transition: background-color 0.3s, color 0.3s;
   }
   
   .pagination .page-item .page-link:hover {
-    background-color: #90000e;
+    background-color: #7bcecc;
     color: #fff;
   }
   
   .pagination .page-item.active .page-link {
-    background-color: #8a000ed0;
-    border-color: #dc3545;
+    background-color: #3090a1;
+    border-color: #ffffff;
     color: #fff;
   }
   
@@ -167,4 +110,5 @@ h1 {
     transform: translateY(0);
   }
 }
+
 

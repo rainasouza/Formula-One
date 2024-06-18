@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Pagination, Table, Form, Button } from 'react-bootstrap';
+import { Pagination, Table, Form, Button, Container } from 'react-bootstrap';
 
 const Circuits = () => {
   const [loading, setLoading] = useState(true);
@@ -20,7 +20,7 @@ const Circuits = () => {
   }, []);
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return <p>Loading...</p>;
   }
 
   const handlePageChange = (pageNumber) => {
@@ -48,53 +48,56 @@ const Circuits = () => {
   const currentItems = filteredCircuits.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <div className="body">
+    <div >
+      <Container className="py-4">
+        <Form className="form-container" onSubmit={handleSearchSubmit}>
+          <Form.Control
+            type="search"
+            placeholder="Search"
+            className="form-control"
+            aria-label="Search"
+            value={query}
+            onChange={handleSearchChange}
+          />
+          <Button variant="outline-success" type="submit">Search</Button>
+        </Form>
 
-      <Form className="form-container" onSubmit={handleSearchSubmit}>
-        <Form.Control
-          type="search"
-          placeholder="Search"
-          className="form-control"
-          aria-label="Search"
-          value={query}
-          onChange={handleSearchChange}
-        />
-        <Button variant="outline-success" type="submit">Search</Button>
-      </Form>
-
-      <Table striped bordered hover responsive className="table">
-        <thead>
-          <tr>
-            <th>Circuit</th>
-            <th>Location</th>
-            <th>More</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Array.isArray(currentItems) && currentItems.map((circuit) => (
-            <tr key={circuit.circuitId}>
-              <td>{circuit.circuitName}</td>
-              <td>{circuit.Location.locality}, {circuit.Location.country}</td>
-              <td>
-                <a href={circuit.url} target="_blank" rel="noopener noreferrer">More info</a>
-              </td>
+        <Table striped bordered hover responsive >
+          <thead>
+            <tr>
+              <th>Circuit</th>
+              <th>Location</th>
+              <th>More</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {Array.isArray(currentItems) && currentItems.map((circuit) => (
+              <tr key={circuit.circuitId}>
+                <td>{circuit.circuitName}</td>
+                <td>{circuit.Location.locality}, {circuit.Location.country}</td>
+                <td>
+                  <a href={circuit.url} target="_blank" rel="noopener noreferrer">More info</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
 
-      <Pagination size='sm' className="pagination">
-        {[...Array(Math.ceil(filteredCircuits.length / itemsPerPage)).keys()].map(pageNumber => (
-          <Pagination.Item
-            key={pageNumber + 1}
-            active={pageNumber + 1 === currentPage}
-            onClick={() => handlePageChange(pageNumber + 1)}
-          >
-            {pageNumber + 1}
-          </Pagination.Item>
-        ))}
-      </Pagination>
+        <Pagination size='sm' className="pagination">
+          {[...Array(Math.ceil(filteredCircuits.length / itemsPerPage)).keys()].map(pageNumber => (
+            <Pagination.Item
+              key={pageNumber + 1}
+              active={pageNumber + 1 === currentPage}
+              onClick={() => handlePageChange(pageNumber + 1)}
+            >
+              {pageNumber + 1}
+            </Pagination.Item>
+          ))}
+        </Pagination>
+      </Container>
       </div>
+
+
 
 
   );

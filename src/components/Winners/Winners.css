@@ -2,7 +2,8 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color:  #b9776b67; 
+
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 25px;
@@ -32,7 +33,7 @@
   
   .winners-form button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #28a74681;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -41,7 +42,7 @@
   }
   
   .winners-form button:hover {
-    background-color: #218838;
+    background-color: #073a128c;
   }
   
 
