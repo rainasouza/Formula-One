@@ -1,3 +1,32 @@
+
+
+# Welcome to I Cavallini
+
+## About
+
+"I Cavallini" is your ultimate destination for all things Formula 1. Named with an Italian touch, which translates to "The Little Horses" in English, this site brings you comprehensive information about Formula 1 constructors, drivers, races, and more.
+
+## Features
+
+- **Constructors**: Explore detailed profiles of all Formula 1 constructors, their history, achievements, and iconic cars.
+- **Drivers**: Learn about the legendary drivers of Formula 1, their career statistics, and personal backgrounds.
+- **Races**: Stay updated with the latest schedules, results, and historical data of Formula 1 races.
+- **Lap Times**: Dive into the lap times set by drivers across different circuits.
+- **Winners**: Discover who won each race across the seasons.
+- **Circuits**: Explore the circuits around the world!
+
+## Purpose
+
+This site is purely educational and aims to provide Formula 1 enthusiasts with a rich and interactive experience. All data presented is sourced from the Ergast Developer API, with due credits to the respective sources.
+
+## Disclaimer
+
+"I Cavallini" is not affiliated with Formula One World Championship Limited or its associated companies in any way. The Formula 1 name, logo, and related marks are trademarks of Formula One Licensing BV.
+
+## Credits
+
+- Images used on this site are sourced from each scuderia's website, with credits provided in the modal windows accompanying the information.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -13,58 +42,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
