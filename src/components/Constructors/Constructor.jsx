@@ -33,6 +33,8 @@ const Constructor = () => {
     setSearchQuery(e.target.value);
   };
 
+
+  
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     const filtered = constructors.filter(constructor =>
