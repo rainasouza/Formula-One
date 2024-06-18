@@ -11,17 +11,13 @@ const Constructor = () => {
   const itemsPerPage = 15;
 
   useEffect(() => {
-    axios.get('http://ergast.com/api/f1/constructors.json?limit=212')
-      .then(response => {
+    axios.get('https://ergast.com/api/f1/constructors.json?limit=212').then(response => {
         setConstructors(response.data.MRData.ConstructorTable.Constructors);
         setFilteredConstructors(response.data.MRData.ConstructorTable.Constructors);
         setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching constructors:', error);
-        setLoading(false);
-      });
-  }, []);
+    });
+}, []);
+
 
 
 
@@ -34,7 +30,7 @@ const Constructor = () => {
   };
 
 
-  
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     const filtered = constructors.filter(constructor =>

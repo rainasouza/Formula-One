@@ -19,17 +19,17 @@ const Home = () => {
  
 
   const facts = [
-    "The longest circuit on the current Formula 1 calendar is the Circuit de Spa-Francorchamps in Belgium, at 7.004 km (4.352 miles) long.",
-    "Ferrari holds the record for the most Constructors' Championships, having won it 16 times.",
-    "The 1 in Formula 1 denotes the highest level of international single-seater auto racing, indicating that it is the pinnacle of motorsport",
-    "The quickest refueling pit stop ever recorded was performed by the Red Bull Racing team in 2019, with a time of just 1.91 seconds."
+    "Just like pilots, Formula One drivers need a special license to compete. It's called a Super Licence, and it's only awarded to drivers who've proven their skills and experience in lower racing series.",
+    "The iconic Monaco track might be known for its tight corners, but it's not actually the shortest. That title belongs to Zandvoort in the Netherlands.",
+    "Unlike cars you see on the road, Formula One cars only have one fuel tank and have to strategically race the entire distance without refuelling.",
+    "Formula One engines are incredibly powerful, generating massive amounts of heat.  Some parts of the engine can reach scorching temperatures exceeding 1000 degrees Celsius!"
   ];
 
   const [currentFactIndex, setCurrentFactIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFactIndex((prevIndex) => (prevIndex + 1) % facts.length);
-    }, 2000); 
+    }, 4500); 
   
     return () => clearInterval(interval);
   }, [facts.length]);
