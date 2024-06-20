@@ -29,11 +29,11 @@ const LapTime = () => {
         const fetchData = async () => {
             if (season && round && lap) {
                 try {
-                    const response = await axios.get(`http://ergast.com/api/f1/${season}/${round}/laps/${lap}.json`);
+                    const response = await axios.get(`https://ergast.com/api/f1/${season}/${round}/laps/${lap}.json`);
                     const data = response.data.MRData.RaceTable.Races[0]?.Laps[0]?.Timings || [];
                     setLapsData(data);
 
-                    const raceResponse = await axios.get(`http://ergast.com/api/f1/${season}/${round}.json`);
+                    const raceResponse = await axios.get(`https://ergast.com/api/f1/${season}/${round}.json`);
                     const raceData = raceResponse.data.MRData.RaceTable.Races[0] || null;
                     setRace(raceData);
                 } catch (err) {
