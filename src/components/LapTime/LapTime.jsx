@@ -43,10 +43,10 @@ const LapTime = () => {
                 }
             }
         };
-    if(loading){
-        fetchData();}
 
-    
+        if (loading) {
+            fetchData();
+        }
     }, [season, round, lap, loading]);
 
     return (
@@ -54,7 +54,7 @@ const LapTime = () => {
             <h2 className="lap-time-title">Lap Time</h2>
             <Form onSubmit={handleSubmit} className="lap-time-form">
                 <Form.Group className="mb-3">
-                    <Form.Label>Season of</Form.Label>
+                    <Form.Label>Season</Form.Label>
                     <Form.Control type="number" value={season} onChange={handleChangeSeason} required />
                 </Form.Group>
                 <Form.Group className="mb-3">
