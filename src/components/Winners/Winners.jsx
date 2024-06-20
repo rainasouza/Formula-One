@@ -13,6 +13,7 @@ const Winners = () => {
     const handleChangeSeason = (e) => {
       e.preventDefault();
       setSeason(e.target.value);
+      setError('')
     }
 
     const handleSubmit = (e) => {
@@ -46,7 +47,7 @@ const Winners = () => {
 
     return (
         <div className="winners-container">
-            <h2 className="winners-title">Say the season/year</h2>
+            <h2 className="winners-title">Winners by Season of {season}</h2>
             <Form className="winners-form" onSubmit={handleSubmit}>
                 <Form.Control
                     type="search"

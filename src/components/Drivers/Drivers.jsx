@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { format, parseISO } from 'date-fns';
-import { Pagination, Table, Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Table, Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const Drivers = () => {
     const [drivers, setDrivers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filteredDrivers, setFilteredDrivers] = useState([]);
-    const itemsPerPage = 30;
+    const itemsPerPage = 15;
     const [currentPage, setCurrentPage] = useState(1);
     const [query, setQuery] = useState('');
 
@@ -41,6 +41,23 @@ const Drivers = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentDrivers = filteredDrivers.slice(indexOfFirstItem, indexOfLastItem);
+
+    // Number of pages
+    const totalPages = Math.ceil(filteredDrivers.length / itemsPerPage);
+
+    // Pagination range
+    const pageRange = 5; // Number of pagination items to show
+
+    // Generate an array of pages to display
+    const getPageRange = () => {
+        let start = Math.max(1, currentPage - Math.floor(pageRange / 2));
+        let end = Math.min(totalPages, start + pageRange - 1);
+
+        // Adjust start again to keep the range of pageRange items
+        start = Math.max(1, end - pageRange + 1);
+
+        return Array.from({ length: (end - start) + 1 }, (_, idx) => start + idx);
+    };
 
     if (loading) {
         return <p>Loading...</p>;
@@ -99,20 +116,37 @@ const Drivers = () => {
                             ))}
                         </tbody>
                     </Table>
-                    <Pagination size='sm'>
-                        
-                        {[...Array(Math.ceil(filteredDrivers.length / itemsPerPage)).keys()].map((pageNumber) => (
-                            <Pagination.Item
-                                key={pageNumber + 1}
-                                active={pageNumber + 1 === currentPage}
-                                onClick={() => handlePageChange(pageNumber + 1)}     
-                            >
-                                {pageNumber + 1}
-                                
-                            </Pagination.Item>
-                        ))}
-                    
-                    </Pagination>
+                    <div className="d-flex justify-content-center">
+                        <nav>
+                            <ul className="pagination">
+                                <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+                                    <button
+                                        className="page-link"
+                                        onClick={() => handlePageChange(currentPage - 1)}
+                                        disabled={currentPage === 1}
+                                    >
+                                        Previous
+                                    </button>
+                                </li>
+                                {getPageRange().map((pageNumber) => (
+                                    <li key={pageNumber} className={`page-item ${pageNumber === currentPage ? 'active' : ''}`}>
+                                        <button className="page-link" onClick={() => handlePageChange(pageNumber)}>
+                                            {pageNumber}
+                                        </button>
+                                    </li>
+                                ))}
+                                <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+                                    <button
+                                        className="page-link"
+                                        onClick={() => handlePageChange(currentPage + 1)}
+                                        disabled={currentPage === totalPages}
+                                    >
+                                        Next
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </Col>
             </Row>
         </Container>

@@ -51,7 +51,7 @@ const LapTime = () => {
 
     return (
         <div className="lap-time-container">
-            <h2 className="lap-time-title">LapTime</h2>
+            <h2 className="lap-time-title">Lap Time</h2>
             <Form onSubmit={handleSubmit} className="lap-time-form">
                 <Form.Group className="mb-3">
                     <Form.Label>Season of</Form.Label>
