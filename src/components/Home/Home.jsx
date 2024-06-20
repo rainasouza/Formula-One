@@ -256,7 +256,7 @@ const Home = () => {
         <div className="row">
           <div className="col-lg-12">
             <p className="text-center text-muted mb-0 py-3">
-               {new Date().getFullYear()} I Cavallini by Raína Araújo. 
+               {new Date().getFullYear()} Developed by Raína Araújo. 
             </p>
             <p className="text-center text-muted mb-0 py-3">
               I have it, I have it printed out!
