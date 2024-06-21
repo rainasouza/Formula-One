@@ -66,7 +66,7 @@ const LapTime = () => {
                     <Form.Control type="number" value={lap} onChange={handleChangeLap} required />
                 </Form.Group>
                 <Button type="submit" disabled={loading}>
-                    {loading ? 'Loading...' : 'Fetch Data'}
+                    {loading ? 'Loading...' : 'Search'}
                 </Button>
             </Form>
 
