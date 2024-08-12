@@ -99,7 +99,7 @@ const Home = () => {
     {
       title: 'Kick Sauber',
       text: ' Renowned for nurturing young talent, Sauber has a history of resilience and adaptability, consistently competing as an independent team in the fiercely competitive world of F1.',
-      img: 'https://admin.sauber-motorsports.nobound.com/fileadmin/_processed_/a/0/csm_C44_03_92d9cd27d9.webp',
+      img: 'https://s2-ge.glbimg.com/uNIo_m-3omWL5YJdzhII0-2sBZE=/0x0:3840x2160/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2024/c/B/YtfIAlSxCK5plEBkwZxw/gfmjmv9wmaau5rq.jpg',
       team: 'Ferrari',
       modalData: {
         name: 'Stake F1 Team Kick Sauber',
